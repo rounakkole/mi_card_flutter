@@ -36,57 +36,56 @@ class MyApp extends StatelessWidget {
                   color: Colors.white70,
                 ),
                 ),
-                Container(
-                  padding: EdgeInsets.all(10),
+                Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                  child: Row(
-                    children: [
-                      Icon(
-                          Icons.phone,
-                        color: Colors.teal,
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        '1234567890',
-                        style: TextStyle(
-                          fontSize: 20,
+                  child: Padding(
+                    padding: EdgeInsets.all(10),
+                    child: Row(
+                      children: [
+                        Icon(
+                            Icons.phone,
                           color: Colors.teal,
                         ),
-                      ),
-                    ],
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          '1234567890',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.teal,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.all(10),
+                Card(
                   color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                  child: Row(
-                    children: [
-                      CircleAvatar(
+                    child: ListTile(
+                      leading: CircleAvatar(
                         radius: 20,
                         backgroundImage: AssetImage('images/email.png'),
                         backgroundColor: Colors.teal,
                       ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
+                      title: Text(
                         'username@email.com',
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.teal,
                         ),
                       ),
-                    ],
+                    ),
                   ),
-                )
-              ],
+                ],
+              ),
             )
         )
-      ),
-    );
-  }
+      );
+    }
 }
+
+
+
