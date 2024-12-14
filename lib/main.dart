@@ -12,15 +12,42 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-            child: Container(
-              height: 100,
-              width: 100,
-              //margin: EdgeInsets.all(50), //outside
-              margin: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
-              padding: EdgeInsets.all(10), //inside
-              color: Colors.white,
-              child: Text('Hello'), //container have only 1 child
-            )),
+            child: Column(
+              //mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                height: 100,
+                width: 100,
+                //margin: EdgeInsets.all(50), //outside
+                margin: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+                padding: EdgeInsets.all(10), //inside
+                color: Colors.white,
+                child: Text('Hello'), //container have only 1 child
+                ),
+
+                Container(
+                  height: 100,
+                  width: double.infinity,
+                  //margin: EdgeInsets.all(50), //outside
+                  margin: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+                  padding: EdgeInsets.all(10), //inside
+                  color: Colors.grey,
+                  child: Text('Hello'), //container have only 1 child
+                ),
+
+                Container(
+                  height: 100,
+                  width: 100,
+                  //margin: EdgeInsets.all(50), //outside
+                  margin: EdgeInsets.symmetric(vertical: 50, horizontal: 20),
+                  padding: EdgeInsets.all(10), //inside
+                  color: Colors.white,
+                  child: Text('Hello'), //container have only 1 child
+                ),
+              ],
+            )
+        )
       ),
     );
   }
